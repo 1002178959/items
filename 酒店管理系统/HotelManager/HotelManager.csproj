@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8F0DC098-DA42-4EA5-94F6-174A566F0115}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>HotelManager</RootNamespace>
+    <AssemblyName>HotelManager</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\BookBLL.cs" />
+    <Compile Include="BLL\CheckInBLL.cs" />
+    <Compile Include="BLL\CostBLL.cs" />
+    <Compile Include="BLL\CustomerBLL.cs" />
+    <Compile Include="BLL\GoodsBLL.cs" />
+    <Compile Include="BLL\PayBLL.cs" />
+    <Compile Include="BLL\RoomBLL.cs" />
+    <Compile Include="BLL\UserBLL.cs" />
+    <Compile Include="DAL\BookDAL.cs" />
+    <Compile Include="DAL\CheckInDAL.cs" />
+    <Compile Include="DAL\CostDAL.cs" />
+    <Compile Include="DAL\CustomerDAL.cs" />
+    <Compile Include="DAL\GoodsDAL.cs" />
+    <Compile Include="DAL\PayDAL.cs" />
+    <Compile Include="DAL\RoomDAL.cs" />
+    <Compile Include="DAL\SQLHelper.cs" />
+    <Compile Include="DAL\UserDAL.cs" />
+    <Compile Include="Model\Book.cs" />
+    <Compile Include="Model\CheckIn.cs" />
+    <Compile Include="Model\Cost.cs" />
+    <Compile Include="Model\Customer.cs" />
+    <Compile Include="Model\Goods.cs" />
+    <Compile Include="Model\Pay.cs" />
+    <Compile Include="Model\Room.cs" />
+    <Compile Include="Model\User.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\AddCost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AddCost.Designer.cs">
+      <DependentUpon>AddCost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AddDeposit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AddDeposit.Designer.cs">
+      <DependentUpon>AddDeposit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BookEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\BookEdit.Designer.cs">
+      <DependentUpon>BookEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CheckInEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CheckInEdit.Designer.cs">
+      <DependentUpon>CheckInEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ExchangeRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ExchangeRoom.Designer.cs">
+      <DependentUpon>ExchangeRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\GoodsEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\GoodsEdit.Designer.cs">
+      <DependentUpon>GoodsEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PayEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PayEdit.Designer.cs">
+      <DependentUpon>PayEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\RoomEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\RoomEdit.Designer.cs">
+      <DependentUpon>RoomEdit.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UI\AddCost.resx">
+      <DependentUpon>AddCost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AddDeposit.resx">
+      <DependentUpon>AddDeposit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\BookEdit.resx">
+      <DependentUpon>BookEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CheckInEdit.resx">
+      <DependentUpon>CheckInEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ExchangeRoom.resx">
+      <DependentUpon>ExchangeRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\GoodsEdit.resx">
+      <DependentUpon>GoodsEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PayEdit.resx">
+      <DependentUpon>PayEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\RoomEdit.resx">
+      <DependentUpon>RoomEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Google Chrome.lnk" />
+    <None Include="Resources\LoginUI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RoomStatusICON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BookICON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CheckInICON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoodsICON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CheckOutICON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddICON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditICON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SysICON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteICON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DirectCheckInICON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BookCheckInICON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewBook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditBook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteBook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Welcome.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddDespiteICON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PayICON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CostICON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddGoodsICON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteGoods.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditGoods.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExchangeICON.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
